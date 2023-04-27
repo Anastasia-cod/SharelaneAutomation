@@ -4,11 +4,11 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support;
 using SharelaneAutomation.Page;
 
-namespace SharelaneAutomation.Login
+namespace SharelaneAutomation.Tests
 {
     [TestFixture]
 
-    public class RegistrationLogin : BaseTest
+    public class LoginTest : BaseTest
     {
         [SetUp]
         public void SetUp()
