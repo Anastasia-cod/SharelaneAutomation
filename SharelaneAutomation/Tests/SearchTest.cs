@@ -18,7 +18,7 @@ namespace SharelaneAutomation.Tests
         }
 
         [Test]
-        public void _Search_ValidBookName()
+        public void TB1_Search_ValidBookName()
         {
             //Var
             string bookName = "Gitanjali";
@@ -31,7 +31,7 @@ namespace SharelaneAutomation.Tests
         }
 
         [Test]
-        public void _Search_InValidBookName()
+        public void TB2_Search_InValidBookName()
         {
             //Var
             string bookName = "Test Test Test";

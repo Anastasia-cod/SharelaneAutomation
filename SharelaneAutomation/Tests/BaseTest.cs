@@ -15,6 +15,7 @@ namespace SharelaneAutomation.Tests
         public void SetUp()
         {
             ChromeDriver = new ChromeDriver();
+            ChromeDriver.Navigate().GoToUrl("https://www.sharelane.com/cgi-bin/main.py");
             ChromeDriver.Manage().Window.Maximize();
             ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             LoginPage = new LoginPage(ChromeDriver);
