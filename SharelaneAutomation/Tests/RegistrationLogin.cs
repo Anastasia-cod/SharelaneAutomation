@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support;
+using SharelaneAutomation.Page;
 
 namespace SharelaneAutomation.Login
 {
@@ -9,7 +10,6 @@ namespace SharelaneAutomation.Login
 
     public class RegistrationLogin : BaseTest
     {
-
         [SetUp]
         public void SetUp()
         {
@@ -20,32 +20,27 @@ namespace SharelaneAutomation.Login
         public void AR1_Login_ValidCredentianals()
         {
             //Var
-            string login = "brian_rao@840.03.sharelane.com";
+            string email = "linda_holmes@343.06.sharelane.com";
             string password = "1111";
 
             //Action
-            ChromeDriver.FindElement(By.XPath("//*[@name='email']")).SendKeys(login);
-            ChromeDriver.FindElement(By.XPath("//*[@name='password']")).SendKeys(password);
-            ChromeDriver.FindElement(By.XPath("(//input)[5]")).Click();
+            LoginPage.Login(email, password);
+            var userPersonalAccountPage = new UserPersonalAccountPage(ChromeDriver);
 
             //Assert
-            var logoutLink = ChromeDriver.FindElement(By.XPath("//a[text()='Logout']"));
-
-            Assert.IsNotNull(logoutLink.Displayed);
+            Assert.IsTrue(userPersonalAccountPage.CheckLogoutLink());
         }
 
         [Test]
-        public void AR3_Login_InvalidCredentianals()
+        public void AR3_Login_InvalidPassword()
         {
             //Var
-            string login = "brian_rao@840.03.sharelane.com";
+            string email = "linda_holmes@343.06.sharelane.com";
             string password = "11112";
             string errorMessage = "Oops, error. Email and/or password don't match our records";
 
             //Action
-            ChromeDriver.FindElement(By.XPath("//*[@name='email']")).SendKeys(login);
-            ChromeDriver.FindElement(By.XPath("//*[@name='password']")).SendKeys(password);
-            ChromeDriver.FindElement(By.XPath("(//input)[5]")).Click();
+            LoginPage.Login(email, password);
 
             var error = ChromeDriver.FindElement(By.ClassName("error_message"));
 
@@ -57,7 +52,45 @@ namespace SharelaneAutomation.Login
             });
         }
 
+        [Test]
+        public void AR4_Login_WithoutEmail()
+        {
+            //Var
+            string password = "1111";
+            string errorMessage = "Oops, error. Email and/or password don't match our records";
 
+            //Action
+            LoginPage.Login(password: password);
+
+            var error = ChromeDriver.FindElement(By.ClassName("error_message"));
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(error.Text, errorMessage);
+                Assert.IsTrue(error.Displayed);
+            });
+        }
+
+        [Test]
+        public void AR5_Login_WithoutPassword()
+        {
+            //Var
+            string email = "linda_holmes@343.06.sharelane.com";
+            string errorMessage = "Oops, error. Email and/or password don't match our records";
+
+            //Action
+            LoginPage.Login(email);
+
+            var error = ChromeDriver.FindElement(By.ClassName("error_message"));
+
+            //Assert
+            Assert.Multiple(() =>
+            {
+                Assert.AreEqual(error.Text, errorMessage);
+                Assert.IsTrue(error.Displayed);
+            });
+        }
     }
 }
 

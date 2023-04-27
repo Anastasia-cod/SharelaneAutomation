@@ -21,8 +21,10 @@
 
   <ItemGroup>
     <None Remove="Login\" />
+    <None Remove="Page\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Tests\" />
+    <Folder Include="Page\" />
   </ItemGroup>
 </Project>
