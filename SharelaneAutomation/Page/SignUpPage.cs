@@ -15,6 +15,7 @@ namespace SharelaneAutomation.Page
         By ConfirmPasswordLocator = By.Name("password2");
         By RegisterButtonLocator = By.XPath("//input[@value='Register']");
         By ConfirmationMessageLocator = By.CssSelector(".confirmation_message");
+        By EmailSignUpUserLocator = By.XPath("//td/b");
 
         public SignUpPage(WebDriver driver) : base(driver)
         {
@@ -81,6 +82,12 @@ namespace SharelaneAutomation.Page
             SetPassword(password);
             SetConfirmPassword(confirmPassword);
             ClickRegisterButton();
+        }
+
+        public string GetEmailSignUpUser_FillInOnlyRequiredFields()
+        {
+            SignUp("22222", "Tiana",email: "testusercred@gmail.com", password: "1111", confirmPassword: "1111");
+            return ChromeDriver.FindElement(EmailSignUpUserLocator).Text;
         }
 
     }

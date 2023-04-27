@@ -30,6 +30,7 @@ namespace SharelaneAutomation.Page
 
         public void Login(string email = "", string password = "")
         {
+            ChromeDriver.Navigate().GoToUrl("https://www.sharelane.com/cgi-bin/main.py");
             SetUserEmail(email);
             SetUserPassword(password);
             ClickLoginButton();

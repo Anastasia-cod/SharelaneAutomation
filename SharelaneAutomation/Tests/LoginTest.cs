@@ -20,7 +20,7 @@ namespace SharelaneAutomation.Tests
         public void AR1_Login_ValidCredentianals()
         {
             //Var
-            string email = "linda_holmes@343.06.sharelane.com";
+            string email = SignUpPage.GetEmailSignUpUser_FillInOnlyRequiredFields();
             string password = "1111";
 
             //Action
@@ -35,7 +35,7 @@ namespace SharelaneAutomation.Tests
         public void AR3_Login_InvalidPassword()
         {
             //Var
-            string email = "linda_holmes@343.06.sharelane.com";
+            string email = SignUpPage.GetEmailSignUpUser_FillInOnlyRequiredFields();
             string password = "11112";
             string errorMessage = "Oops, error. Email and/or password don't match our records";
 
@@ -76,7 +76,7 @@ namespace SharelaneAutomation.Tests
         public void AR5_Login_WithoutPassword()
         {
             //Var
-            string email = "linda_holmes@343.06.sharelane.com";
+            string email = SignUpPage.GetEmailSignUpUser_FillInOnlyRequiredFields();
             string errorMessage = "Oops, error. Email and/or password don't match our records";
 
             //Action
