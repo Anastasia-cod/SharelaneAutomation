@@ -8,12 +8,6 @@ namespace SharelaneAutomation.Tests
 
     public class SignUpTest : BaseTest
     {
-        [SetUp]
-        public void SetUp()
-        {
-            ChromeDriver.Navigate().GoToUrl("https://www.sharelane.com/cgi-bin/main.py");
-        }
-
         [Test]
         public void SU1_SignUp_ValidData_FillInOnlyRequiredFields()
         {

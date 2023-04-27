@@ -12,7 +12,6 @@ namespace SharelaneAutomation.Tests
         [SetUp]
         public void SetUp()
         {
-            ChromeDriver.Navigate().GoToUrl("https://www.sharelane.com/cgi-bin/main.py");
             MainPage = new MainPage(ChromeDriver);
             BookInfoPage = new BookInfoPage(ChromeDriver);
         }

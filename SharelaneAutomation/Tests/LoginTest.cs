@@ -10,12 +10,6 @@ namespace SharelaneAutomation.Tests
 
     public class LoginTest : BaseTest
     {
-        [SetUp]
-        public void SetUp()
-        {
-            ChromeDriver.Navigate().GoToUrl("https://www.sharelane.com/cgi-bin/main.py");
-        }
-
         [Test]
         public void AR1_Login_ValidCredentianals()
         {
