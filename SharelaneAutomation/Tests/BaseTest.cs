@@ -15,7 +15,7 @@ namespace SharelaneAutomation.Tests
         [SetUp]
         public void SetUp()
         {
-            switch ("FireFox")
+            switch ("Browser")
             {
                 case "FireFox":
                     Driver = new FirefoxDriver();
@@ -24,8 +24,7 @@ namespace SharelaneAutomation.Tests
                     Driver = new ChromeDriver();
                     break;
             }
-                
-            Driver = new ChromeDriver();
+
             Driver.Navigate().GoToUrl("https://www.sharelane.com/cgi-bin/main.py");
             Driver.Manage().Window.Maximize();
             Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
