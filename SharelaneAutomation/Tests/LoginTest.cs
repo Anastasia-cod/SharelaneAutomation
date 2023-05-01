@@ -19,7 +19,7 @@ namespace SharelaneAutomation.Tests
 
             //Action
             LoginPage.Login(email, password);
-            var userPersonalAccountPage = new UserPersonalAccountPage(ChromeDriver);
+            var userPersonalAccountPage = new UserPersonalAccountPage(Driver);
 
             //Assert
             Assert.IsTrue(userPersonalAccountPage.CheckLogoutLink());
@@ -36,7 +36,7 @@ namespace SharelaneAutomation.Tests
             //Action
             LoginPage.Login(email, password);
 
-            var error = ChromeDriver.FindElement(By.ClassName("error_message"));
+            var error = Driver.FindElement(By.ClassName("error_message"));
 
             //Assert
             Assert.Multiple(() =>
@@ -56,7 +56,7 @@ namespace SharelaneAutomation.Tests
             //Action
             LoginPage.Login(password: password);
 
-            var error = ChromeDriver.FindElement(By.ClassName("error_message"));
+            var error = Driver.FindElement(By.ClassName("error_message"));
 
             //Assert
             Assert.Multiple(() =>
@@ -76,7 +76,7 @@ namespace SharelaneAutomation.Tests
             //Action
             LoginPage.Login(email);
 
-            var error = ChromeDriver.FindElement(By.ClassName("error_message"));
+            var error = Driver.FindElement(By.ClassName("error_message"));
 
             //Assert
             Assert.Multiple(() =>

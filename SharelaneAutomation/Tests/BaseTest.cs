@@ -1,31 +1,42 @@
 ﻿using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 using SharelaneAutomation.Page;
 
 namespace SharelaneAutomation.Tests
 {
     public class BaseTest
     {
-        public WebDriver ChromeDriver { get; set; }
+        public WebDriver Driver { get; set; }
         public LoginPage LoginPage { get; set; }
         public SignUpPage SignUpPage { get; set; }
 
         [SetUp]
         public void SetUp()
         {
-            ChromeDriver = new ChromeDriver();
-            ChromeDriver.Navigate().GoToUrl("https://www.sharelane.com/cgi-bin/main.py");
-            ChromeDriver.Manage().Window.Maximize();
-            ChromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
-            LoginPage = new LoginPage(ChromeDriver);
-            SignUpPage = new SignUpPage(ChromeDriver);
+            switch ("FireFox")
+            {
+                case "FireFox":
+                    Driver = new FirefoxDriver();
+                    break;
+                default:
+                    Driver = new ChromeDriver();
+                    break;
+            }
+                
+            Driver = new ChromeDriver();
+            Driver.Navigate().GoToUrl("https://www.sharelane.com/cgi-bin/main.py");
+            Driver.Manage().Window.Maximize();
+            Driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            LoginPage = new LoginPage(Driver);
+            SignUpPage = new SignUpPage(Driver);
         }
 
         [TearDown]
         public void TearDown()
         {
-            ChromeDriver.Quit();
+            Driver.Quit();
         }
     }
 }
