@@ -8,6 +8,7 @@ namespace SharelaneAutomation.Page
         By EmailInputLocator = By.XPath("//*[@name='email']");
         By PasswordInputLocator = By.XPath("//*[@name='password']");
         By LoginButtonLocator = By.XPath("(//input)[5]");
+        By ErrorMessageLocator = By.ClassName("error_message");
 
         public LoginPage(WebDriver driver) : base(driver)
         {
@@ -34,6 +35,13 @@ namespace SharelaneAutomation.Page
             SetUserEmail(email);
             SetUserPassword(password);
             ClickLoginButton();
+        }
+
+        public string GetErrorMessage()
+        {
+            Assert.That(ChromeDriver.FindElement(ErrorMessageLocator).Displayed);
+
+            return ChromeDriver.FindElement(ErrorMessageLocator).Text;
         }
     }
 }

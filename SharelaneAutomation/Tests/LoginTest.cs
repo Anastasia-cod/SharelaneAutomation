@@ -36,14 +36,8 @@ namespace SharelaneAutomation.Tests
             //Action
             LoginPage.Login(email, password);
 
-            var error = Driver.FindElement(By.ClassName("error_message"));
-
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.AreEqual(error.Text, errorMessage);
-                Assert.IsTrue(error.Displayed);
-            });
+            Assert.AreEqual(LoginPage.GetErrorMessage(), errorMessage);
         }
 
         [Test]
@@ -56,14 +50,8 @@ namespace SharelaneAutomation.Tests
             //Action
             LoginPage.Login(password: password);
 
-            var error = Driver.FindElement(By.ClassName("error_message"));
-
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.AreEqual(error.Text, errorMessage);
-                Assert.IsTrue(error.Displayed);
-            });
+            Assert.AreEqual(LoginPage.GetErrorMessage(), errorMessage);
         }
 
         [Test]
@@ -76,14 +64,8 @@ namespace SharelaneAutomation.Tests
             //Action
             LoginPage.Login(email);
 
-            var error = Driver.FindElement(By.ClassName("error_message"));
-
             //Assert
-            Assert.Multiple(() =>
-            {
-                Assert.AreEqual(error.Text, errorMessage);
-                Assert.IsTrue(error.Displayed);
-            });
+            Assert.AreEqual(LoginPage.GetErrorMessage(), errorMessage);
         }
     }
 }
