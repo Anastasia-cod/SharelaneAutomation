@@ -15,10 +15,14 @@ namespace SharelaneAutomation.Tests
         [SetUp]
         public void SetUp()
         {
-            switch ("Browser")
+            string browser = TestContext.Parameters.Get("Browser");
+
+            switch (browser)
             {
-                case "FireFox":
-                    Driver = new FirefoxDriver();
+                case "headless":
+                    ChromeOptions options = new ChromeOptions();
+                    options.AddArgument("--headless");
+                    Driver = new ChromeDriver(options);
                     break;
                 default:
                     Driver = new ChromeDriver();
