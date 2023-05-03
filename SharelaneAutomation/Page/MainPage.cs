@@ -15,12 +15,12 @@ namespace SharelaneAutomation.Page
 
         public void SetBookNameInSearchInput(string bookName)
         {
-            ChromeDriver.FindElement(SearchInputLocator).SendKeys(bookName);
+            Driver.FindElement(SearchInputLocator).SendKeys(bookName);
         }
 
         public void ClickSearchButton()
         {
-            ChromeDriver.FindElement(SearchButtonLocator).Click();
+            Driver.FindElement(SearchButtonLocator).Click();
         }
 
         public BookInfoPage SearchBook(string bookName)
@@ -28,12 +28,12 @@ namespace SharelaneAutomation.Page
             SetBookNameInSearchInput(bookName);
             ClickSearchButton();
 
-            return new BookInfoPage(ChromeDriver);
+            return new BookInfoPage(Driver);
         }
 
         public string GetErrorMessage()
         {
-            return ChromeDriver.FindElement(NothingFoundMessageLocator).Text;
+            return Driver.FindElement(NothingFoundMessageLocator).Text;
         }
     }
 }

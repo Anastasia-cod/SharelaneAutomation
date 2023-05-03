@@ -23,52 +23,52 @@ namespace SharelaneAutomation.Page
 
         public void ClickSignUpLink()
         {
-            ChromeDriver.FindElement(SignUpLinkLocator).Click();
+            Driver.FindElement(SignUpLinkLocator).Click();
         }
 
         public void SetZipCode(string zipCode)
         {
-            ChromeDriver.FindElement(ZipCodeInputLocator).SendKeys(zipCode);
+            Driver.FindElement(ZipCodeInputLocator).SendKeys(zipCode);
         }
 
         public void ClickContinueButton()
         {
-            ChromeDriver.FindElement(ContinueButtonLocator).Click();
+            Driver.FindElement(ContinueButtonLocator).Click();
         }
 
         public void SetFirstName(string firstName)
         {
-            ChromeDriver.FindElement(FirstNameInputLocator).SendKeys(firstName);
+            Driver.FindElement(FirstNameInputLocator).SendKeys(firstName);
         }
 
         public void SetLastName(string lastName)
         {
-            ChromeDriver.FindElement(LastNameInputLocator).SendKeys(lastName);
+            Driver.FindElement(LastNameInputLocator).SendKeys(lastName);
         }
 
         public void SetEmail(string email)
         {
-            ChromeDriver.FindElement(EmailLocator).SendKeys(email);
+            Driver.FindElement(EmailLocator).SendKeys(email);
         }
 
         public void SetPassword(string password)
         {
-            ChromeDriver.FindElement(PasswordLocator).SendKeys(password);
+            Driver.FindElement(PasswordLocator).SendKeys(password);
         }
 
         public void SetConfirmPassword(string confirmPassword)
         {
-            ChromeDriver.FindElement(ConfirmPasswordLocator).SendKeys(confirmPassword);
+            Driver.FindElement(ConfirmPasswordLocator).SendKeys(confirmPassword);
         }
 
         public void ClickRegisterButton()
         {
-            ChromeDriver.FindElement(RegisterButtonLocator).Click();
+            Driver.FindElement(RegisterButtonLocator).Click();
         }
 
         public string GetConfirmationMessage()
         {
-            return ChromeDriver.FindElement(ConfirmationMessageLocator).Text;
+            return Driver.FindElement(ConfirmationMessageLocator).Text;
         }
 
         public void SignUp (string zipCode = "", string firstName = "", string lastName = "", string email = "", string password = "", string confirmPassword = "")
@@ -87,7 +87,7 @@ namespace SharelaneAutomation.Page
         public string GetEmailSignUpUser_FillInOnlyRequiredFields()
         {
             SignUp("22222", "Tiana",email: "testusercred@gmail.com", password: "1111", confirmPassword: "1111");
-            return ChromeDriver.FindElement(EmailSignUpUserLocator).Text;
+            return Driver.FindElement(EmailSignUpUserLocator).Text;
         }
 
     }

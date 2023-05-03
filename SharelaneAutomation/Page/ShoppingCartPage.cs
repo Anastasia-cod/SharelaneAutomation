@@ -20,44 +20,44 @@ namespace SharelaneAutomation.Page
 
         public void ClickShoppingCartLink()
         {
-            ChromeDriver.FindElement(ShoppingCartLinkLocator).Click();
+            Driver.FindElement(ShoppingCartLinkLocator).Click();
         }
 
         public void SetQuantity(int quantity)
         {
-            ChromeDriver.FindElement(QuantityInputLocator).Clear();
-            ChromeDriver.FindElement(QuantityInputLocator).SendKeys(Convert.ToString(quantity));
+            Driver.FindElement(QuantityInputLocator).Clear();
+            Driver.FindElement(QuantityInputLocator).SendKeys(Convert.ToString(quantity));
         }
 
         public void ClickUpdateButton()
         {
-            ChromeDriver.FindElement(UpdateButtonLocator).Click();
+            Driver.FindElement(UpdateButtonLocator).Click();
         }
 
         public string GetPriseUsdValue()
         {
-            return ChromeDriver.FindElement(PriceUsdLocator).Text.Replace(".", ",");
+            return Driver.FindElement(PriceUsdLocator).Text.Replace(".", ",");
         }
 
         public string GetDiscountPercentValue()
         {
-            return ChromeDriver.FindElement(DiscountPercentLocator).Text;
+            return Driver.FindElement(DiscountPercentLocator).Text;
         }
 
         public string GetDiscountUsdValue()
         {
-            return ChromeDriver.FindElement(DiscountUsdLocator).Text.Replace(".", ",");
+            return Driver.FindElement(DiscountUsdLocator).Text.Replace(".", ",");
         }
 
         public string GetDTotalUsdValue()
         {
-            return ChromeDriver.FindElement(TotalUsdLocator).Text.Replace(".", ",");
+            return Driver.FindElement(TotalUsdLocator).Text.Replace(".", ",");
         }
 
         public void AddBookToShoppingCart(string bookName, int quantity)
         {
-            new MainPage(ChromeDriver).SearchBook(bookName);
-            new BookInfoPage(ChromeDriver).ClickAddToCardButton();
+            new MainPage(Driver).SearchBook(bookName);
+            new BookInfoPage(Driver).ClickAddToCardButton();
             ClickShoppingCartLink();
             SetQuantity(quantity);
             ClickUpdateButton();

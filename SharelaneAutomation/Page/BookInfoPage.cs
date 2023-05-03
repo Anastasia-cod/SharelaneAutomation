@@ -13,12 +13,12 @@ namespace SharelaneAutomation.Page
 
         public void ClickAddToCardButton()
         {
-            ChromeDriver.FindElement(AddToCardButtonLocator).Click();
+            Driver.FindElement(AddToCardButtonLocator).Click();
         }
 
         public bool CheckForAddToCardButton()
 		{
-			return ChromeDriver.FindElement(AddToCardButtonLocator).Displayed;
+			return Driver.FindElement(AddToCardButtonLocator).Displayed;
 		}
 	}
 }
