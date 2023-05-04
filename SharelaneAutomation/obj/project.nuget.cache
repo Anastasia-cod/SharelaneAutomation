@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LUz3U49QUVgOOPRZEBepZEaL9k44wVYDC5qiKtoJ9bPbW39P9lcvjTcLkdyMXqIkW6JrQ7Slt9cjByAMkUuJQw==",
+  "dgSpecHash": "qZYG6UKs97NtrYZAJEntMUScZgs8Vlm6BiGw+yADb8Gva8+TMBM2SxjvhS9gVv+MvlzDYaWAwgHxPuFVnr4rvQ==",
   "success": true,
-  "projectFilePath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
+  "projectFilePath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
   "expectedPackageFiles": [
     "/Users/admin/.nuget/packages/coverlet.collector/3.1.2/coverlet.collector.3.1.2.nupkg.sha512",
     "/Users/admin/.nuget/packages/microsoft.codecoverage/17.1.0/microsoft.codecoverage.17.1.0.nupkg.sha512",

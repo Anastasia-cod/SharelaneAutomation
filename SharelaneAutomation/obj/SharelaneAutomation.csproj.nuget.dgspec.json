@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj": {}
+    "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj": {}
   },
   "projects": {
-    "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/Core/Core.csproj": {
+    "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/Core/Core.csproj",
+        "projectUniqueName": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/Core/Core.csproj",
+        "projectPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj",
         "packagesPath": "/Users/admin/.nuget/packages/",
-        "outputPath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/Core/obj/",
+        "outputPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/admin/.nuget/NuGet/NuGet.Config"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj": {
+    "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
+        "projectUniqueName": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
         "projectName": "SharelaneAutomation",
-        "projectPath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
+        "projectPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
         "packagesPath": "/Users/admin/.nuget/packages/",
-        "outputPath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/obj/",
+        "outputPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/admin/.nuget/NuGet/NuGet.Config"
@@ -87,8 +87,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/Core/Core.csproj": {
-                "projectPath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/Core/Core.csproj"
+              "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj": {
+                "projectPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj"
               }
             }
           }
