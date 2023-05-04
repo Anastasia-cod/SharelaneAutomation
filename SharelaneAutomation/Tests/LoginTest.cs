@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support;
 using SharelaneAutomation.Page;
+using Core.Utilities;
 
 namespace SharelaneAutomation.Tests
 {
@@ -14,11 +15,12 @@ namespace SharelaneAutomation.Tests
         public void AR1_Login_ValidCredentianals()
         {
             //Var
+            var standartUser = UserBuilder.StandartUser;
+
             string email = SignUpPage.GetEmailSignUpUser_FillInOnlyRequiredFields();
-            string password = "1111";
 
             //Action
-            LoginPage.Login(email, password);
+            LoginPage.Login(email, standartUser.Password);
             var userPersonalAccountPage = new UserPersonalAccountPage(Driver);
 
             //Assert

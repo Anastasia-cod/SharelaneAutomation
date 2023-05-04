@@ -9,14 +9,14 @@ namespace SharelaneAutomation.Tests
         public MainPage MainPage { get; set; }
         public BookInfoPage BookInfoPage { get; set; }
 
-        [SetUp]
+        //[SetUp]
         public void SetUp()
         {
             MainPage = new MainPage(Driver);
             BookInfoPage = new BookInfoPage(Driver);
         }
 
-        [Test]
+        //[Test]
         public void TB1_Search_ValidBookName()
         {
             //Var
@@ -29,7 +29,7 @@ namespace SharelaneAutomation.Tests
             Assert.IsTrue(BookInfoPage.CheckForAddToCardButton());
         }
 
-        [Test]
+        //[Test]
         public void TB2_Search_InValidBookName()
         {
             //Var

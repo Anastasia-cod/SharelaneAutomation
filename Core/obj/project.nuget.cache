@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "5Misp2KUxCPm/d8QjkL55qQtz45Gs2+FGWzr4zzrMTMdQy6Lm4kVFRFFCypdBq2BLUgqYAbbJNYdd/JsWcP9Fw==",
+  "dgSpecHash": "/iKaexLV/CW/6TXcYQOev/kHb7SGOoLerwQgwaNUaoqjfgppGPL/GBB7DncvaIfmf/bSDeUcxQSl4uweIoGW4A==",
   "success": true,
   "projectFilePath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/Core/Core.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/admin/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/Users/admin/.nuget/packages/nunit/3.13.3/nunit.3.13.3.nupkg.sha512"
+  ],
   "logs": []
 }
