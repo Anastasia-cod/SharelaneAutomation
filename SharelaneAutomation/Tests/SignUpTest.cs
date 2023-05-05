@@ -8,7 +8,7 @@ namespace SharelaneAutomation.Tests
 
     public class SignUpTest : BaseTest
     {
-        //[Test]
+        [Test]
         public void SU1_SignUp_ValidData_FillInOnlyRequiredFields()
         {
             //Var
@@ -26,7 +26,7 @@ namespace SharelaneAutomation.Tests
             Assert.That(SignUpPage.GetConfirmationMessage(), Is.EqualTo(expectedConfirmationMessage));
         }
 
-        //[Test]
+        [Test]
         public void SU2_SignUp_ValidData_FillInAllFields()
         {
             //Var

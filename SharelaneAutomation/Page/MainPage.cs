@@ -3,8 +3,8 @@ using OpenQA.Selenium;
 
 namespace SharelaneAutomation.Page
 {
-	public class MainPage : BasePage
-	{
+    public class MainPage : BasePage
+    {
         By SearchInputLocator = By.Name("keyword");
         By SearchButtonLocator = By.XPath("//input[@value='Search']");
         By NothingFoundMessageLocator = By.CssSelector(".confirmation_message");

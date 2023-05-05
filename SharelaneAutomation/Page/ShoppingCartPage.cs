@@ -3,8 +3,8 @@ using OpenQA.Selenium;
 
 namespace SharelaneAutomation.Page
 {
-	public class ShoppingCartPage : BasePage
-	{
+    public class ShoppingCartPage : BasePage
+    {
         By ShoppingCartLinkLocator = By.XPath("//a[@href='./shopping_cart.py']");
         By QuantityInputLocator = By.Name("q");
         By UpdateButtonLocator = By.XPath("//input[@value='Update']");
