@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj": {}
+    "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj": {}
   },
   "projects": {
-    "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj": {
+    "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
-        "projectName": "SharelaneAutomation",
-        "projectPath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
+        "projectUniqueName": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj",
+        "projectName": "Core",
+        "projectPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj",
         "packagesPath": "/Users/admin/.nuget/packages/",
-        "outputPath": "/Users/admin/Desktop/C# Course Homework/SharelaneAutomation/SharelaneAutomation/obj/",
+        "outputPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/admin/.nuget/NuGet/NuGet.Config"
@@ -39,6 +39,70 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.200/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
+        "projectName": "SharelaneAutomation",
+        "projectPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/SharelaneAutomation.csproj",
+        "packagesPath": "/Users/admin/.nuget/packages/",
+        "outputPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/SharelaneAutomation/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/admin/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj": {
+                "projectPath": "/Users/admin/Desktop/CourseHomework/SharelaneAutomation/Core/Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[17.1.0, )"
@@ -54,6 +118,26 @@
             "NUnit3TestAdapter": {
               "target": "Package",
               "version": "[4.2.1, )"
+            },
+            "Selenium.Firefox.WebDriver": {
+              "target": "Package",
+              "version": "[0.27.0, )"
+            },
+            "Selenium.Opera.WebDriver": {
+              "target": "Package",
+              "version": "[2.30.0, )"
+            },
+            "Selenium.Support": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.9.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[112.0.5615.4900, )"
             },
             "coverlet.collector": {
               "target": "Package",
